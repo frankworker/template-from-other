@@ -46,7 +46,7 @@ exports.sourceNodes = async props => {
   await Promise.all([
     createPublishedGoogleSpreadsheetNode(
       props,
-      'https://docs.google.com/spreadsheets/d/e/2PACX-1vSp3oltt5RkGHzhSBQ24J9cNZXL8YWF4gvVdJFe5tXRgJ9lM9ZNxDeKWgPmYebAeIFuuts4ktiwh78f/pub?gid=0&single=true&output=csv',
+      'https://docs.google.com/spreadsheets/d/e/2PACX-1vTrMcoh2D3JJFwtkyshekb_rvbJOLdYjklqzyid_ZOOwWT-uB6NQm4AK46v7NPYlj-mQowbjFL6v8kk/pub?gid=0&single=true&output=csv',
       "KeyValue",
       { skipFirstLine: true }
     ),
@@ -60,14 +60,14 @@ exports.onCreatePage = async ({ page, actions: { createPage, deletePage } }) => 
   await deletePage(page);
 
 
-  // create the alias for '/' using zh-hk
+  // create the alias for '/' using zh
   await createPage({
     ...page,
     path: originalPath,
     context: {
       ...page.context,
       originalPath,
-      lang: 'zh-hk',
+      lang: 'en',
     },
   });
 
