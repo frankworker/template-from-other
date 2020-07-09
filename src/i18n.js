@@ -13,7 +13,7 @@ export const createInstance = lang => {
         fr: { translation: translationsFR },
       },
       lng: lang,
-      fallbackLng: 'zh',
+      fallbackLng: 'en',
       interpolation: {
         escapeValue: false,
       },

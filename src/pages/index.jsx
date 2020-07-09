@@ -40,7 +40,7 @@ export const query = graphql`
       edges {
         node {
           key
-          value_zh_hk
+          value_zh
           value_en
         }
       }
